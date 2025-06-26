@@ -44,11 +44,6 @@ Cenário: Login inválido
     Então: mensagem de erro informando "Username or password is invalid"
 
 
-    
-    Quando: ao clicar no botão de registrar
-    
-    Então: devo ver mensagens de erro indicando os campos obrigatórios
-
 
 #### 📄 Licença
 
