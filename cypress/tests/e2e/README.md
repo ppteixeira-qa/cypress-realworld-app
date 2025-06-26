@@ -43,7 +43,30 @@ Cenário: Login inválido
     
     Então: mensagem de erro informando "Username or password is invalid"
 
+### ✅ Feature: Funcionalidade de Registro
+Como um novo visitante quero criar uma conta no sistema para poder acessar e utilizar os serviços.
 
+Cenário: Registro de novo usuário com sucesso
+   
+    Início: página de registro
+      
+      E preenchimento do campo First Name com "Luli"
+      
+      E preenchimento do campo Last Name com "Cero"
+      
+      E preenchimento do campo Username com "CeroLuli"
+
+      E preenchimento do campo Password com "123arroz"
+
+      E preenchimento do campo Confirm Password com "123arroz"
+    
+    Quando: ao clicar no botão de Sign Up
+    
+    Então: redirecionamento para a página 'Get Started with Real World App'
+      
+      E preenchimento do campo 'Create Bank Account'
+      
+      E recebimento da mensagem 'Finished'
 
 #### 📄 Licença
 
