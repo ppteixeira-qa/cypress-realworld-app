@@ -43,32 +43,7 @@ Cenário: Login inválido
     
     Então: mensagem de erro informando "Username or password is invalid"
 
-### ✅ Feature: Funcionalidade de Registro
-Como um novo visitante quero criar uma conta no sistema para poder acessar e utilizar os serviços.
 
-Cenário: Registro de novo usuário com sucesso
-   
-    Início: página de registro
-      
-      E preencho o campo nome com "Patricia Teixeira"
-      
-      E preencho o campo email com "novausuario@email.com"
-      
-      E preencho o campo senha com "senhaForte123"
-    
-    Quando: ao clicar no botão de registrar
-    
-    Então: devo ser redirecionado para a página inicial
-      
-      E devo ver uma mensagem de boas-vindas
-
-Cenário: Registro com informações incompletas
-    
-    Início: página de registro
-      
-      E preencho apenas o campo email com "incompleto@email.com"
-      
-      E deixo os campos de nome e senha em branco
     
     Quando: ao clicar no botão de registrar
     
