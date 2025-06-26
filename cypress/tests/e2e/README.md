@@ -67,6 +67,20 @@ Cenário: Registro de novo usuário com sucesso
       E preenchimento do campo 'Create Bank Account'
       
       E recebimento da mensagem 'Finished'
+      
+
+Cenário: Registro com informações incompletas
+    
+    Início: página de registro
+  
+      E preenchimento do campo First Name, Last Name, Username, Password
+
+      E preenchimento do campo Confirm Password com senha errada
+
+    Quando: ao clicar no campo Confirm Password
+
+    Então: mensagem "Password does not match"
+
 
 #### 📄 Licença
 
