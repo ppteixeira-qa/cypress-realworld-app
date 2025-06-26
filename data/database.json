@@ -74,6 +74,105 @@
       "balance": 49474,
       "createdAt": "2023-12-07T04:39:38.383Z",
       "modifiedAt": "2024-03-07T00:07:36.510Z"
+    },
+    {
+      "id": "_-ncA42gw",
+      "uuid": "b4011401-e086-44d7-808f-2c5979a9fd91",
+      "firstName": "Rui",
+      "lastName": "Lins",
+      "username": "RuiLins3",
+      "password": "$2a$10$brLqheGByZnavSLEzdgCIunbuf68CzrsDhWhPRx2L4CM/rKTAV5BO",
+      "balance": 0,
+      "createdAt": "2025-06-26T20:48:01.124Z",
+      "modifiedAt": "2025-06-26T20:48:01.124Z"
+    },
+    {
+      "id": "p2bMKoi6L",
+      "uuid": "23e4e6c3-9e71-4e1c-8fd2-cb84704201cd",
+      "firstName": "Rui",
+      "lastName": "Lins",
+      "username": "RuiLins3",
+      "password": "$2a$10$aZD4tZIuSKgIPv.Z5UONtO1cLh0HJ0f3NVXcDNAkysJf6ijetA16i",
+      "balance": 0,
+      "createdAt": "2025-06-26T20:49:16.906Z",
+      "modifiedAt": "2025-06-26T20:49:16.906Z"
+    },
+    {
+      "id": "VaM3TEjYH",
+      "uuid": "339d97c2-e6dd-4f8b-a9b8-f8b62873a836",
+      "firstName": "Rui",
+      "lastName": "Lins",
+      "username": "RuiLins3",
+      "password": "$2a$10$Kf8mnqEx.yznCu9hvFnTnOLcRq15Xk0lLiXj2dUDIYXVIFZn5djJq",
+      "balance": 0,
+      "createdAt": "2025-06-26T20:50:33.279Z",
+      "modifiedAt": "2025-06-26T20:50:33.279Z"
+    },
+    {
+      "id": "Hz9Wvq4rX",
+      "uuid": "6a852d11-3dc1-41d4-8b52-05f98a089f2c",
+      "firstName": "Rui",
+      "lastName": "Lins",
+      "username": "RuiLins3",
+      "password": "$2a$10$2rpt07tAkkAANc6A3H/FL.d44rorZFKmI89LrqS3smLjFqp8OMm5a",
+      "balance": 0,
+      "createdAt": "2025-06-26T20:51:05.959Z",
+      "modifiedAt": "2025-06-26T20:51:05.959Z"
+    },
+    {
+      "id": "ntN9GmgG5",
+      "uuid": "7cb586d5-139c-411e-9e17-378da15be869",
+      "firstName": "Rui",
+      "lastName": "Lins",
+      "username": "RuiLins3",
+      "password": "$2a$10$TrEYY/RbMp591xXVRjIEGewHCWkNdGDdyILILEkBppi5WYOI53pgm",
+      "balance": 0,
+      "createdAt": "2025-06-26T20:53:53.151Z",
+      "modifiedAt": "2025-06-26T20:53:53.151Z"
+    },
+    {
+      "id": "p1DwXmPd2",
+      "uuid": "8cbe91f9-5523-45f8-8c45-a7550ac20b03",
+      "firstName": "Rui",
+      "lastName": "Lins",
+      "username": "RuiLins3",
+      "password": "$2a$10$YJriijQtEsL20RRM8h2vG.yWJmLo98XuZ5Jzgwy/A7VKxyYSb5.CS",
+      "balance": 0,
+      "createdAt": "2025-06-26T20:55:53.228Z",
+      "modifiedAt": "2025-06-26T20:55:53.228Z"
+    },
+    {
+      "id": "hsRQ2scS9",
+      "uuid": "b87b07b5-9fc2-4a54-8e31-b69fda738667",
+      "firstName": "Rui",
+      "lastName": "Lins",
+      "username": "RuiLins3",
+      "password": "$2a$10$bb5F1LtYUYKHBrsMeNHiWOT3lLLKLovDV2nrxN5D4/CjXmXtnASF2",
+      "balance": 0,
+      "createdAt": "2025-06-26T20:56:29.810Z",
+      "modifiedAt": "2025-06-26T20:56:29.810Z"
+    },
+    {
+      "id": "0rSNJ6H1V",
+      "uuid": "b12d6630-cd2a-4cff-894f-a3ce1000842f",
+      "firstName": "Rui",
+      "lastName": "Lins",
+      "username": "RuiLins3",
+      "password": "$2a$10$WbN45zLwRgFl/FKjjTnuR.7uBzkTgkD6Mq2ffYVu7sfBMC81rXDY.",
+      "balance": 0,
+      "createdAt": "2025-06-26T20:57:42.395Z",
+      "modifiedAt": "2025-06-26T20:57:42.395Z"
+    },
+    {
+      "id": "D_1lM6N8H",
+      "uuid": "62cbb21d-f788-4f25-aad9-521ea01142d4",
+      "firstName": "Luli",
+      "lastName": "Cero",
+      "username": "CeroLuli",
+      "password": "$2a$10$zM.tZzqCoiPlbVN/qcUVFu15ptoscoJe/l0EEtfGN6gAnmVl/2w32",
+      "balance": 0,
+      "createdAt": "2025-06-26T20:59:15.258Z",
+      "modifiedAt": "2025-06-26T20:59:15.258Z"
     }
   ],
   "contacts": [
@@ -253,6 +352,28 @@
       "isDeleted": false,
       "createdAt": "2024-01-26T14:01:01.815Z",
       "modifiedAt": "2024-03-07T08:44:31.174Z"
+    },
+    {
+      "id": "NGv85zw8C",
+      "uuid": "def2cf74-9b84-42b7-9f51-1e328039483c",
+      "userId": "_-ncA42gw",
+      "bankName": "WallStreet",
+      "accountNumber": "123456789",
+      "routingNumber": "987654321",
+      "isDeleted": false,
+      "createdAt": "2025-06-26T20:56:32.306Z",
+      "modifiedAt": "2025-06-26T20:56:32.306Z"
+    },
+    {
+      "id": "Pd26iGoVb",
+      "uuid": "eadde978-dfe0-4ef0-9e14-7f4e858cd486",
+      "userId": "D_1lM6N8H",
+      "bankName": "WallStreet",
+      "accountNumber": "123456789",
+      "routingNumber": "987654321",
+      "isDeleted": false,
+      "createdAt": "2025-06-26T20:59:17.807Z",
+      "modifiedAt": "2025-06-26T20:59:17.807Z"
     }
   ],
   "transactions": [
