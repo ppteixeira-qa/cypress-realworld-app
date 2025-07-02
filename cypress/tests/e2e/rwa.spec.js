@@ -1,4 +1,4 @@
-describe('RWA', () => {
+describe('RWA Login', () => {
   it('Valid Login', () => {
     cy.visit('http://localhost:3000')
     cy.get('#username').type('Judah_Dietrich50')
@@ -8,27 +8,36 @@ describe('RWA', () => {
   });
 });
 
-describe('RWA', () => {
-  it('Invalid Login', () => {
+describe('RWA Credit', () => {
+  it('Saldo Positivo', () => {
     cy.visit('http://localhost:3000')
-    cy.get('#username').type('judah_50')
+    cy.get('#username').type('Judah_Dietrich50')
     cy.get('#password').type('s3cret')
     cy.get('[data-test="signin-submit"]').click()
-    cy.get('[data-test="signin-error"]').contains('Username or password is invalid')
+    cy.get('[data-test=sidenav-home').contains('Home')
+    cy.get('[data-testid=AttachMoneyIcon]').click()
+    cy.get('[data-test="user-list-item-GjWovtg2hr"]').click()
+    cy.get('#amount').type('700.00')
+    cy.get('#transaction-create-description-input').type('Evidência')
+    cy.get('[data-test="transaction-create-submit-payment"]').click()
+    cy.get('.MuiAlert-message').contains('Transaction Submitted!')
+    cy.get('[data-test="new-transaction-return-to-transactions"]').click()
+    cy.get('[data-test="sidenav-home"]').click()
+    cy.get('[data-test="nav-personal-tab"]').click()
   });
 });
 
-describe('RWA', () => {
-  it('New user register', () => {
+describe('RWA New User', () => {
+  it('New User Register', () => {
     cy.visit('http://localhost:3000')
     cy.get('[data-test="signup"]').click()
-    cy.get('#firstName').type('Luli')
-    cy.get('#lastName').type('Cero')
-    cy.get('#username').type('CeroLuli')
+    cy.get('#firstName').type('Michael')
+    cy.get('#lastName').type('Jackson')
+    cy.get('#username').type('Jackson5')
     cy.get('#password').type('123arroz')
     cy.get('#confirmPassword').type('123arroz')
     cy.get('[data-test="signup-submit"]').click()
-    cy.get('#username').type('CeroLuli')
+    cy.get('#username').type('Jackson5')
     cy.get('#password').type('123arroz')
     cy.get('[data-test="signin-submit"]').click()
     cy.get('[data-test="user-onboarding-dialog-title"]').contains('Get Started with Real World App')
@@ -42,8 +51,44 @@ describe('RWA', () => {
   });
 });
 
-describe('RWA', () => {
-  it.only('New user register incomplete informations', () => {
+describe('RWA New User', () => {
+  it('Incomplete Register', () => {
+    cy.visit('http://localhost:3000')
+    cy.get('[data-test="signup"]').click()
+    cy.get('#firstName').type('Michael')
+    cy.get('#lastName').type('Jackson')
+    cy.get('#username').type(' ')
+    cy.get('#password').type('123arroz')
+    cy.get('#confirmPassword').type('123arroz')
+    cy.get('[data-test="signup-submit"]').click()
+    cy.get('#password').type('123arroz')
+    cy.get('[data-test="signin-submit"]').click()
+    cy.get('#username-helper-text').contains('Username is required')
+  });
+});
+
+describe('RWA Login Fail', () => {
+  it('Invalid Login', () => {
+    cy.visit('http://localhost:3000')
+    cy.get('#username').type('judah_50')
+    cy.get('#password').type('s3cret')
+    cy.get('[data-test="signin-submit"]').click()
+    cy.get('[data-test="signin-error"]').contains('Username or password is invalid')
+  });
+});
+
+describe('RWA Login Fail', () => {
+  it('Username Empty', () => {
+    cy.visit('http://localhost:3000')
+    cy.get('#username').type(' ')
+    cy.get('#password').type('s3cret')
+    cy.get('[data-test="signin-submit"]').click()
+    cy.get('[data-test="signin-error"]').contains('Username or password is invalid')
+  });
+});
+
+describe('RWA New User Fail', () => {
+  it('New user register incomplete informations', () => {
     cy.visit('http://localhost:3000')
     cy.get('[data-test="signup"]').click()
     cy.get('#firstName').type('2323')
@@ -52,7 +97,6 @@ describe('RWA', () => {
     cy.get('#password').type('123arroz')
     cy.get('#confirmPassword').type('arroz')
     cy.get('#confirmPassword-helper-text').contains('Password does not match')
-
   });
 });
 
