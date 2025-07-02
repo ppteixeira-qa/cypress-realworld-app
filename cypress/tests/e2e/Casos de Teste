@@ -1,0 +1,161 @@
+# RWA EX1 - Casos de Teste
+
+##📝 Login
+
+✅ Caso de Teste 01
+
+Título: Login com sucesso
+
+Pré-condições:
+
+O usuário já possui conta registrada com username e senha válidos
+
+Passos:
+
+Abrir o site "http://localhost:3000/signin"
+
+Inserir username e senha válidos
+
+Clicar no botão "Sign In"
+
+Dados de entrada:
+
+Username: Judah_Dietrich50
+
+Senha: s3cret
+
+Resultado Esperado:
+
+Usuário redirecionado para a tela principal do app
+
+Prioridade: Alta
+
+
+🚫 Caso de Teste 02
+
+Título: Username com credenciais inválidas
+
+Pré-condições:
+
+Username incorreto
+
+Passos:
+
+Abrir o site "http://localhost:3000/signin"
+
+Username incorreto 
+
+Clicar em "Entrar"
+
+Dados de entrada:
+
+Email: "judah_50"
+
+Senha: s3cret
+
+Resultado Esperado:
+
+Mensagem de erro exibida: "Username or password is invalid"
+
+Prioridade: Alta
+
+
+🔄 Caso de Teste 03
+
+Título: Username com campo vazios
+
+Pré-condições:
+
+Usuário acessa a tela de login
+
+Passos:
+
+Abrir o site "http://localhost:3000/signin"
+
+Deixar o campo de username em branco
+
+Clicar em "Entrar"
+
+Resultado Esperado:
+
+Mensagem de erro exibida: "Username or password is invalid"
+
+Prioridade: Média
+
+
+##📝 Registro de Usuário
+
+✅ Caso de Teste 01
+
+Título: Registro de novo usuário com sucesso
+
+Pré-condições:
+
+Usuário não cadastrado
+
+Passos:
+
+Abrir o site "http://localhost:3000/signin"
+
+Clicar em "Don't have an account? Sign Up"
+
+Preencher nome, sobrenome, username, senha e confirmação de senha
+
+Clicar em "Sign Up"
+
+Dados de entrada:
+
+Nome: Michael
+
+Sobrenome: Jackson
+
+Username: Jackson5
+
+Senha: 123arroz
+
+Confirmar senha: 123arroz
+
+Resultado Esperado:
+
+Conta criada com sucesso
+
+Usuário redirecionado para a tela principal do site "Get Started with Real World App"
+
+Prioridade: Alta
+
+
+🚫 Caso de Teste 02
+
+Título: Registro com informações incompletas
+
+Pré-condições:
+
+Acesso à tela de registro faltando username
+
+Passos:
+
+Abrir o site "http://localhost:3000/signin"
+
+Clicar em "Don't have an account? Sign Up"
+
+Deixar o username em branco
+
+Clicar em "Sign Up"
+
+Exemplo de entrada:
+
+Nome: Michael
+
+Sobrenome: Jackson
+
+Username: 
+
+Senha: 123arroz
+
+Confirmar senha: 123arroz
+
+Resultado Esperado:
+
+Registro não concluído
+
+Prioridade: Alta
