@@ -95,3 +95,197 @@ Confirmar senha: 123arroz
 Resultado Esperado: Registro não concluído
 
 Prioridade: Alta
+
+
+RWA EX2 - Casos de Teste
+
+✅ Caso de Teste 01
+ID: TC_ENVDIN_001
+Título: Enviar dinheiro com saldo suficiente
+Pré-condições:
+
+Usuário está logado no aplicativo
+
+Conta do usuário possui saldo disponível superior ao valor a ser enviado
+
+Passos:
+
+Acesse a funcionalidade "Enviar Dinheiro"
+
+Escolha um contato válido
+
+Insira um valor inferior ao saldo da conta
+
+Confirme a transação
+
+Dados de entrada:
+
+Contato: João da Silva
+
+Valor: R$ 50,00
+
+Saldo disponível: R$ 200,00
+
+Resultado Esperado:
+
+Transação concluída com sucesso
+
+Saldo da conta atualizado corretamente
+
+Mensagem de confirmação exibida
+
+Prioridade: Alta
+
+🚫 Caso de Teste 02
+ID: TC_ENVDIN_002
+Título: Enviar dinheiro com saldo insuficiente
+Pré-condições:
+
+Usuário está logado no aplicativo
+
+Saldo na conta é inferior ao valor inserido
+
+Passos:
+
+Vá para "Enviar Dinheiro"
+
+Selecione um contato
+
+Digite um valor maior que o saldo disponível
+
+Tente confirmar a transação
+
+Dados de entrada:
+
+Saldo: R$ 20,00
+
+Valor: R$ 100,00
+
+Resultado Esperado:
+
+Mensagem de erro exibida: "Saldo insuficiente"
+
+Transação bloqueada
+
+Prioridade: Alta
+
+🧪 Caso de Teste 03
+ID: TC_ENVDIN_003
+Título: Enviar valor zero
+Pré-condições:
+
+Usuário está logado
+
+Possui saldo positivo
+
+Passos:
+
+Abrir "Enviar Dinheiro"
+
+Selecionar um contato
+
+Informar o valor R$ 0,00
+
+Tentar confirmar
+
+Resultado Esperado:
+
+Mensagem de validação exibida: "O valor deve ser maior que zero"
+
+Transação não deve prosseguir
+
+Prioridade: Média
+
+🧪 Caso de Teste 04
+ID: TC_ENVDIN_004
+Título: Enviar dinheiro para um contato inválido
+Pré-condições:
+
+Usuário logado
+
+Contato não registrado ou inexistente
+
+Passos:
+
+Acessar "Enviar Dinheiro"
+
+Inserir nome ou número de telefone não registrado
+
+Informar valor válido
+
+Confirmar transação
+
+Resultado Esperado:
+
+Mensagem de erro exibida: "Contato inválido ou inexistente"
+
+Transação não realizada
+
+Prioridade: Alta
+
+📱 Caso de Teste 05
+ID: TC_ENVDIN_005
+Título: Enviar dinheiro com conexão instável ou sem internet
+Pré-condições:
+
+Usuário logado
+
+Desconectar ou simular perda de conexão com a internet
+
+Passos:
+
+Abrir "Enviar Dinheiro"
+
+Inserir dados válidos (contato e valor)
+
+Confirmar transação com internet desconectada
+
+Resultado Esperado:
+
+Mensagem exibida: "Não foi possível concluir. Verifique sua conexão com a internet"
+
+Transação não processada
+
+Prioridade: Alta
+
+🧾 Caso de Teste 06
+ID: TC_ENVDIN_006
+Título: Verificar atualização do extrato após envio
+Pré-condições:
+
+Transação de envio realizada com sucesso
+
+Passos:
+
+Acessar extrato da conta após envio de dinheiro
+
+Verificar se a transação aparece corretamente registrada
+
+Resultado Esperado:
+
+Transação exibida com valor, destinatário e data corretos
+
+Prioridade: Média
+
+🔒 Caso de Teste 07
+ID: TC_ENVDIN_007
+Título: Enviar dinheiro com autenticação obrigatória
+Pré-condições:
+
+Configuração do app exige senha ou biometria para transações
+
+Passos:
+
+Abrir "Enviar Dinheiro"
+
+Inserir dados válidos
+
+Confirmar sem autenticar (não inserir senha ou biometria)
+
+Resultado Esperado:
+
+Aplicativo solicita autenticação
+
+Sem autenticação, a transação não é concluída
+
+Prioridade: Alta
