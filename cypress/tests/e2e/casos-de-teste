@@ -205,3 +205,60 @@ Transação exibida com valor, destinatário e data corretos
 Prioridade: Média
 
 
+RWA EX3 - Casos de Teste
+
+✅ Caso de Teste 01
+Título: Visualizar histórico de transações com sucesso
+
+Pré-condições: 
+Usuário está logado no site
+Usuário possui pelo menos uma transação registrada (envio ou recebimento de dinheiro)
+
+Passos:
+Fazer login no site
+Navegar até a opção "Histórico de Transações"
+Visualizar a lista de transações exibida
+
+Resultado Esperado:
+Todas as transações anteriores do usuário são exibidas corretamente
+Informações visíveis por transação: destinatário/remetente, valor, data e status
+As transações mais recentes aparecem no topo da lista
+
+Prioridade: Alta
+
+
+🔄 Caso de Teste 02
+Título: Atualizar histórico após nova transação
+
+Pré-condições:
+Usuário já realizou uma transação recente (ex: enviou ou recebeu dinheiro)
+
+Passos:
+Concluir uma transação com sucesso
+Ir até "Histórico de Transações"
+Verificar se a nova transação aparece na lista
+
+Resultado Esperado:
+Transação mais recente aparece no topo da lista
+Informações corretas: valor, data, destinatário/remetente, status
+
+Prioridade: Alta
+
+
+📱 Caso de Teste 03
+Título: Verificar formatação e ordenação do histórico
+
+Pré-condições:
+Usuário possui múltiplas transações registradas
+
+Passos:
+Acessar a seção "Histórico de Transações"
+Observar a ordem de exibição das transações
+Verificar a formatação de datas e valores
+
+Resultado Esperado:
+Transações ordenadas da mais recente para a mais antiga
+Valores exibidos com símbolo de moeda
+Datas com formatação legível (ex: dd/mm/aaaa ou "Hoje", "Ontem")
+
+Prioridade: Média
