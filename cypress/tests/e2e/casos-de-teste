@@ -4,6 +4,7 @@ RWA EX1 - Casos de Teste
 
 ✅ Caso de Teste 01
 Título: Login com sucesso
+
 Pré-condições: O usuário já possui conta registrada com username e senha válidos
 
 Passos:
@@ -14,18 +15,20 @@ Clicar no botão "Sign In"
 Dados de entrada:
 Username: Judah_Dietrich50
 Senha: s3cret
+
 Resultado Esperado: Usuário redirecionado para a tela principal do app
-Prioridade: Alta
 
 
 🚫 Caso de Teste 02
 Título: Username com credenciais inválidas
+
 Pré-condições: Username incorreto
 
 Passos:
 Abrir o site "http://localhost:3000/signin"
-Username incorreto 
-Clicar em "Entrar"
+Username incorreto
+Senha válida 
+Clicar em "Sign In"
 
 Dados de entrada:
 Username: "judah_50"
@@ -33,27 +36,26 @@ Senha: s3cret
 
 Resultado Esperado: Mensagem de erro exibida: "Username or password is invalid"
 
-Prioridade: Alta
-
 
 🔄 Caso de Teste 03
-Título: Username com campo vazios
+Título: Username com campo vazio
+
 Pré-condições: Usuário acessa a tela de login
 
 Passos:
 Abrir o site "http://localhost:3000/signin"
 Deixar o campo de username em branco
-Clicar em "Entrar"
+Inserir senha válida
+Clicar em "Sign In"
 
 Resultado Esperado: Mensagem de erro exibida: "Username or password is invalid"
-
-Prioridade: Alta
 
 
 ##📝 Registro de Usuário
 
 ✅ Caso de Teste 01
 Título: Registro de novo usuário com sucesso
+
 Pré-condições: Usuário não cadastrado
 
 Passos:
@@ -65,14 +67,13 @@ Clicar em "Sign Up"
 Dados de entrada:
 Nome: Michael
 Sobrenome: Jackson
-Username: Jackson5
+Username: mJackson5
 Senha: 123arroz
 Confirmar senha: 123arroz
 
-Resultado Esperado: Conta criada com sucesso
-Usuário redirecionado para a tela principal do site "Get Started with Real World App"
-
-Prioridade: Alta
+Resultado Esperado: 
+Conta criada com sucesso
+Usuário redirecionado para a tela principal do aplicativo "Get Started with Real World App"
 
 
 🚫 Caso de Teste 02
@@ -83,6 +84,7 @@ Passos:
 Abrir o site "http://localhost:3000/signin"
 Clicar em "Don't have an account? Sign Up"
 Deixar o username em branco
+Preencher nome, sobrenome, senha e confirmação de senha
 Clicar em "Sign Up"
 
 Exemplo de entrada:
@@ -94,8 +96,6 @@ Confirmar senha: 123arroz
 
 Resultado Esperado: Registro não concluído
 
-Prioridade: Alta
-
 
 RWA EX2 - Casos de Teste
 
@@ -103,29 +103,27 @@ RWA EX2 - Casos de Teste
 Título: Enviar dinheiro com saldo suficiente
 
 Pré-condições:
-Usuário está logado no site
+Usuário está logado no aplicativo
 Conta do usuário possui saldo disponível superior ao valor a ser enviado
 
 Passos:
-Acesse a funcionalidade "Enviar"
+Acesse a funcionalidade "New"
 Escolha um contato válido
 Insira um valor inferior ao saldo da conta
 Confirme a transação
 
 Dados de entrada:
-Contato: João da Silva
-Valor: R$ 50,00
-Saldo disponível: R$ 200,00
+Contato: Kristian Bradtke
+Valor: R$ 150,00
+Saldo disponível: R$ 344,00
 
 Resultado Esperado: 
 Transação concluída com sucesso
 Saldo da conta atualizado corretamente
 Mensagem de confirmação exibida
 
-Prioridade: Alta
 
-
-🚫 Caso de Teste 02
+🚫 Caso de Teste 02 - Bug Report Saldo Insuficiente
 Título: Enviar dinheiro com saldo insuficiente
 
 Pré-condições:
@@ -139,17 +137,14 @@ Digite um valor maior que o saldo disponível
 Tente confirmar a transação
 
 Dados de entrada:
-Saldo: R$ 20,00
-Valor: R$ 100,00
+Saldo: R$ 494,00
+Valor: R$ 495,00
 
 Resultado Esperado:
-Mensagem de erro exibida: "Saldo insuficiente"
-Transação bloqueada
-
-Prioridade: Alta
+Mensagem de erro exibida: "Saldo insuficiente" ou Transação bloqueada
 
 
-🧪 Caso de Teste 03
+🧪 Caso de Teste 03 - Bug Report Zero
 Título: Enviar valor zero
 
 Pré-condições:
@@ -166,28 +161,6 @@ Resultado Esperado:
 Mensagem de validação exibida: "O valor deve ser maior que zero"
 Transação não deve prosseguir
 
-Prioridade: Média
-
-
-🧪 Caso de Teste 04
-Título: Enviar dinheiro para um contato inválido
-
-Pré-condições:
-Usuário logado
-Contato não registrado ou inexistente
-
-Passos:
-Acessar "Enviar Dinheiro"
-Inserir nome ou número de telefone não registrado
-Informar valor válido
-Confirmar transação
-
-Resultado Esperado:
-Mensagem de erro exibida: "Contato inválido ou inexistente"
-Transação não realizada
-
-Prioridade: Alta
-
 
 🧾 Caso de Teste 05
 Título: Verificar atualização do extrato após envio
@@ -198,11 +171,10 @@ Transação de envio realizada com sucesso
 Passos:
 Acessar extrato da conta após envio de dinheiro
 Verificar se a transação aparece corretamente registrada
+Buscar por "BR Transfer"
 
 Resultado Esperado:
-Transação exibida com valor, destinatário e data corretos
-
-Prioridade: Média
+Transação exibida com valor e destinatário corretos
 
 
 RWA EX3 - Casos de Teste
@@ -211,38 +183,34 @@ RWA EX3 - Casos de Teste
 Título: Visualizar histórico de transações com sucesso
 
 Pré-condições: 
-Usuário está logado no site
+Usuário está logado no aplicativo
 Usuário possui pelo menos uma transação registrada (envio ou recebimento de dinheiro)
 
 Passos:
 Fazer login no site
-Navegar até a opção "Histórico de Transações"
+Navegar até a opção "Mine"
 Visualizar a lista de transações exibida
 
 Resultado Esperado:
 Todas as transações anteriores do usuário são exibidas corretamente
-Informações visíveis por transação: destinatário/remetente, valor, data e status
+Informações visíveis por transação: destinatário/remetente e valor
 As transações mais recentes aparecem no topo da lista
-
-Prioridade: Alta
 
 
 🔄 Caso de Teste 02
 Título: Atualizar histórico após nova transação
 
 Pré-condições:
-Usuário já realizou uma transação recente (ex: enviou ou recebeu dinheiro)
+Usuário já realizou uma transação recente (enviou ou recebeu dinheiro)
 
 Passos:
 Concluir uma transação com sucesso
-Ir até "Histórico de Transações"
+Ir até "Mine"
 Verificar se a nova transação aparece na lista
 
 Resultado Esperado:
 Transação mais recente aparece no topo da lista
-Informações corretas: valor, data, destinatário/remetente, status
-
-Prioridade: Alta
+Informações corretas: valor e destinatário/remetente
 
 
 📱 Caso de Teste 03
@@ -252,13 +220,10 @@ Pré-condições:
 Usuário possui múltiplas transações registradas
 
 Passos:
-Acessar a seção "Histórico de Transações"
+Acessar a seção "Mine"
 Observar a ordem de exibição das transações
 Verificar a formatação de datas e valores
 
 Resultado Esperado:
 Transações ordenadas da mais recente para a mais antiga
 Valores exibidos com símbolo de moeda
-Datas com formatação legível (ex: dd/mm/aaaa ou "Hoje", "Ontem")
-
-Prioridade: Média

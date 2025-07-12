@@ -1,0 +1,29 @@
+{
+    "userSuccess": {
+      "username": "Judah_Dietrich50",
+      "password": "s3cret"
+    },
+    "userFail": {
+      "username": "judah_50",
+      "password": "s3cret"
+    },
+    "userNew": {
+      "firstname": "Michael",
+      "lastname": "Jackson",
+      "username": "mJackson5",
+      "password": "123arroz",
+      "bank": "Wallstreet",
+      "bankaccount": "987654321",
+      "banknumber": "123456789"
+    },
+    "userCredit": {
+      "money": "000.00",
+      "notecredit": "BR Transfer"
+    },
+    "userIncomplete": {
+      "firstname": "Michael",
+      "lastname": "Jackson",
+      "username": " ",
+      "password": "123arroz"
+    }
+}
