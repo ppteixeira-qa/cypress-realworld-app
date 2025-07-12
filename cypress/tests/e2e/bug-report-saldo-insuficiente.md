@@ -1,7 +1,7 @@
 # 🐞 Bug Report - Real World App
 
 ## 🧾 Informações Gerais
-Título do Bug: "Envio de crédito com saldo negativo"
+Título do Bug: "Envio de crédito com saldo insuficiente"
 
 Data do Report: 12/07/2025
 
